@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "d7f3cc9d-3aea-40fb-a66e-64e22dcc3f5b",
+		"name": "lamda-to-mern",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17642930"
+	},
+	"item": [
+		{
+			"name": "distribution_date_stock_merf",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/distribution_date_stock_merf?distributionID=1&date=2018-12-14 10:06:34&itemType=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"distribution_date_stock_merf"
+					],
+					"query": [
+						{
+							"key": "distributionID",
+							"value": "1"
+						},
+						{
+							"key": "date",
+							"value": "2018-12-14 10:06:34"
+						},
+						{
+							"key": "itemType",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hospital_date_stock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/hospital_date_stock?hospitalID=1&date=2018-12-14 10:06:34&itemType=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"hospital_date_stock"
+					],
+					"query": [
+						{
+							"key": "hospitalID",
+							"value": "1"
+						},
+						{
+							"key": "date",
+							"value": "2018-12-14 10:06:34"
+						},
+						{
+							"key": "itemType",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_merf_consumption",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"itemID\": 1,\r\n        \"itemName\": \"Amoxicillin (trihydrate)  \",\r\n        \"unit\": \"125 mg /5ml Syrup\",\r\n        \"type\": \"Suspension\",\r\n        \"batchNo\": \"HAIDC\",\r\n        \"SerialNo\": \" \",\r\n        \"dispensedQuantity\": 20,\r\n        \"lossQuantity\": 0,\r\n        \"consumerID\": 53,\r\n        \"dateCreated\": \"2018-12-01 15:17:18\",\r\n        \"dateModified\": \"2019-01-03 15:21:58\",\r\n        \"hospitalID\": 4,\r\n        \"itemType\": 1,\r\n        \"totalQuantity\": 5,\r\n        \"expireDate\": \"2020-01-03 15:21:58\",\r\n        \"unitPrice\": \"10000\",\r\n        \"isID\": 1\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/merf_consumption",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"merf_consumption"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_merf_hoss_GRN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"grn\": {\r\n        \"recieveDate\": \"2018-07-15 00:00:00\",\r\n        \"poID\": 1,\r\n        \"hospitalID\": 1,\r\n        \"isConfirmed\": 1,\r\n        \"DateCreated\": \"2018-11-26 03:21:46\",\r\n        \"DateModified\": \"2018-11-26 03:21:46\",\r\n        \"isReviewed\": 1,\r\n        \"status\": 1,   \r\n         \"totalRecieved\": null,\r\n     \r\n        \"grni\": [\r\n            {\r\n                \"grnID\": 1,\r\n                \"recieveDate\": \"2018-07-15 00:00:00\",\r\n                \"poID\": 1,\r\n                \"distributionID\": 1,\r\n                \"headOfficeID\": 0,\r\n                \"invoiceNo\": 0,\r\n                \"isDrugTestConducted\": 0,\r\n                \"isConfirmed\": 0,\r\n                \"isSynced\": 0,\r\n                \"DateCreated\": \"2018-11-26 11:28:40\",\r\n                \"DateModified\": \"2018-11-26 11:28:40\",\r\n                \"isReviewed\": 1,\r\n                \"status\": 1,\r\n                \"expireDate\": \"0000-00-00 00:00:00\",\r\n                \"GRNCode\": \"MERF - GRN - Sindh WH - 2018 - 0001\",\r\n                \"server_id\": 0,\r\n                \"lastSynced\": \"0000-00-00 00:00:00\",\r\n                \"isSync\": 0,\r\n                \"grniID\": 47,\r\n                \"grnID\": 1,\r\n                \"itemID\": 1,\r\n                \"itemName\": \"Lidocaine (hydrochloride)\",\r\n                \"unit\": \"10ml 2%w/v\",\r\n                \"type\": \"Ampoule\",\r\n                \"recievedQuantity\": 3400,\r\n                \"mgfDate\": \"2017-08-01\",\r\n                \"expireDate\": \"2021-02-01\",\r\n                \"batchNo\": \"B5973\",\r\n                \"brandName\": \"\",\r\n                \"manufacturer\": \"\",\r\n                \"amount\": 0,\r\n                \"isDTRequired\": 0,\r\n                \"DateCreated\": \"2018-07-15 00:00:00\",\r\n                \"DateModified\": \"2018-11-26 11:28:40\",\r\n                \"itemType\": 1,\r\n                \"strength\": 0,\r\n                \"SerialNo\": \"\",\r\n                \"Make\": \"\",\r\n                \"Model\": \"\",\r\n                \"YearOfManufecture\": \"2017-08-01\",\r\n                \"server_id\": 0,\r\n                \"lastSynced\": \"0000-00-00 00:00:00\",\r\n                \"isSync\": 0,\r\n                \"discrepency\": 0\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/merf_hoss_GRN",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"merf_hoss_GRN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "merf_stock_request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sr\":{\r\n        \"srID\" : 1,\r\n\t\t\"srDate\" : \"2018-07-02 00:00:00\",\r\n\t\t\"distributionID\" : 1,\r\n\t\t\"toHeadOffice\" : 0,\r\n\t\t\"itemType\" : 3,\r\n\t\t\"isConfirmed\" : 0,\r\n\t\t\"isSynced\" : 0,\r\n\t\t\"DateCreated\" : \"2018-07-02 00:00:00\",\r\n\t\t\"DateModified\" : \"2018-08-27 17:47:25\",\r\n\t\t\"totalAmount\" : 0,\r\n\t\t\"isReviewed\" : 1,\r\n\t\t\"status\" : 4,\r\n\t\t\"loginID\" : 57,\r\n\t\t\"hospitalID\" : 9,\r\n\t\t\"SRCode\" : \"MERF - SRF THQ SAJAWAL 2018 - 0001\",\r\n\t\t\"server_id\" : 0,\r\n\t\t\"lastSynced\" : \"0001-01-01 00:00:00\",\r\n\t\t\"isSync\" : 0,\r\n        \"sri\":[]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/merf_stock_request",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"merf_stock_request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "merfmlmisbincardreport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/merf_report?locationType&wareHouseID&hospitalID&fromDate&toDate&itemID",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"merf_report"
+					],
+					"query": [
+						{
+							"key": "locationType",
+							"value": null
+						},
+						{
+							"key": "wareHouseID",
+							"value": null
+						},
+						{
+							"key": "hospitalID",
+							"value": null
+						},
+						{
+							"key": "fromDate",
+							"value": null
+						},
+						{
+							"key": "toDate",
+							"value": null
+						},
+						{
+							"key": "itemID",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
