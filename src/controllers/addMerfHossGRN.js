@@ -74,7 +74,7 @@ const insert = (req, res, next) => {
                 updateIssuedStock();
               }
 
-              return res.json({ status: 0, Description: "sucess" });
+              return res.json({ status: 0, Description: "sucess",grnID,GRNCode });
             } else {
               conn.rollback(function () {
                 next(err2);
