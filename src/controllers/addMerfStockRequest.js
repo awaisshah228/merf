@@ -70,7 +70,7 @@ const insert = (req, res, next) => {
               insertStockRequestItems(rowsstr1.insertId, j);
               insertTransactionsRegister(rowsstr1.insertId, SRCode, j);
             }
-            return res.json({ status: 0, Description: "sucess" });
+            return res.json({ status: 0, Description: "sucess",srID:rowsstr1.insertId });
           } else {
             conn.rollback(function () {
               next(err1);
