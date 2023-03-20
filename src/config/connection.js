@@ -1,6 +1,6 @@
 const mysql = require('mysql')
 
-const connection = mysql.createPool({
+const connection = mysql.createConnection({
   connectionLimit : 50,
   host: process.env.DB_HOST, // Host name for database connection:
   port: process.env.DB_PORT, // Port number for database connection:
@@ -8,6 +8,8 @@ const connection = mysql.createPool({
   password: process.env.DB_PASSWORD, // Password for the above database user:
   database: process.env.DATABASE // Database name:
 })
+connection.connect()
+
 
 
 module.exports = connection
