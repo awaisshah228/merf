@@ -12,6 +12,7 @@ const getData= (req, res)=>
 		if (err2 == null)
 		{
 			// connection.end(function(err11){});
+			
 			res.json({status: 0, Description: "sucess", data: rowsstr[0]});
 		}
 		else
