@@ -15,7 +15,7 @@ const insert = (req, res,next) => {
 
   conn.beginTransaction(function (err) {
     if (err) {
-       throw err ;
+       next(err) ;
     }
 
     for (var i = 0; i < obj.length; i++) {
